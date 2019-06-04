@@ -1,4 +1,4 @@
-Jenkinsfile (myfirst Pipeline)
+
 pipeline {
     agent any
 
