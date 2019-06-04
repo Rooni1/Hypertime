@@ -11,7 +11,7 @@ pipeline {
             }
             
         }
-        stage('Build') {
+        /*stage('Build') {
             steps{
                 sh 'cd hypertime-frontend && npm run build cd ..' 
             }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                sh  'cd hypertime-frontend && npm run test cd ..'
             }
-        }
+        }*/
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
