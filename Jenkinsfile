@@ -9,10 +9,13 @@ pipeline {
                 sh 'cd hypertime-frontend && npm install && cd ..'
                
             }
+            steps{
+                sh 'cd hypertime-frontend && npm run build cd ..' 
+            }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+               sh  'cd hypertime-frontend && npm run test cd ..'
             }
         }
         stage('Deploy') {
