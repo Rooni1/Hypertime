@@ -5,10 +5,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                "prebuild": "npm run build:clean",
-                "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
-                "build:clean": "rimraf ./build",
+                sh 'cd hypertime-frontend && npm install && cd..'
+               
             }
         }
         stage('Test') {
