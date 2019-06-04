@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd hypertime-frontend && npm install && cd..'
+                sh 'cd hypertime-frontend && npm install && cd ..'
                
             }
         }
