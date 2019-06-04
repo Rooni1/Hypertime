@@ -4,14 +4,19 @@ pipeline {
     tools {nodejs "node"}
 
     stages {
-        stage('Build') {
+        stage('npm install') {
             steps {
                 sh 'cd hypertime-frontend && npm install && cd ..'
                
             }
+            
+        }
+        stage('Build') {
             steps{
                 sh 'cd hypertime-frontend && npm run build cd ..' 
             }
+
+
         }
         stage('Test') {
             steps {
